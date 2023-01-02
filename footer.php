@@ -11,24 +11,24 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'portfolio' ) ); ?>">
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+		<a href="<?php echo esc_url(__('https://wordpress.org/', 'portfolio')); ?>">
 				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'portfolio' ), 'WordPress' );
-				?>
+/* translators: %s: CMS name, i.e. WordPress. */
+printf(esc_html__('Proudly powered by %s', 'portfolio'), 'WordPress');
+?>
 			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'portfolio' ), 'portfolio', '<a href="http://underscores.me/">Jethro Landa</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+
+    </div>
+
+    <div class="nav col-md-4 justify-content-end list-unstyled d-flex">
+		<span class="mb-3 mb-md-0 text-muted">&copy; <?php echo date('Y'); ?> Jethro Landa</span>
+    </div>
+  </footer>
 </div><!-- #page -->
 
-<?php wp_footer(); ?>
+<?php wp_footer();?>
 
 </body>
 </html>

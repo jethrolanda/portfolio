@@ -1,3 +1,5 @@
+
+
 <?php
 /**
  * Template part for displaying page content in page.php
@@ -17,15 +19,52 @@
 	<?php portfolio_post_thumbnail();?>
 
 	<div class="entry-content">
+  <img class="profile-picture" src="<?php echo get_bloginfo('template_url') ?>/images/jethro_profile_pic.jpg"/>
+  <p>Hi, my name is Jethro Landa.</p>
+  <p>I am a Web Developer that specializes in wordpress plugin and theme development.</p>
+  <p>I have a decade of working experience in wordpress websites.</p>
+
+
+  <p>Education:</p>
+  <p>Bachelor of Science in Information Technology 2008-2012</p>
+  <p>Experience:</p>
+  <p>
+  Lancera
+  Wordpress Developer
+  Aug 2013-Oct 2014
+  </p>
+
+  <p>
+  Primary Work
+  Convert psd designs into websites from scratch
+  Maintain websites
+  </p>
+
+
+  <p>
+  Rymera Web Co
+  Software Engineer
+  Jan 2015-July 2022
+  </p>
+
+
+<p>
+Primary Work
+PSD to Wordpress from scratch
+Create custom plugins
+Maintain company owned plugins
+Create frontend automated tests for company owned plugins using cypress
+Debugging Customer Websites
+</p>
+
+
+<p>Skills:</p>
+<p>GIT, Javascript, React JS, Wordpress Theme Development, Wordpress Plugin Development, PSD to Wordpress</p>
+
+
 		<?php
 the_content();
 
-wp_link_pages(
-    array(
-        'before' => '<div class="page-links">' . esc_html__('Pages:', 'portfolio'),
-        'after'  => '</div>',
-    )
-);
 ?>
 	</div><!-- .entry-content -->
 
