@@ -23,7 +23,7 @@ printf(esc_html__('Proudly powered by %s', 'portfolio'), 'WordPress');
     </div>
 
     <div class="nav col-md-4 justify-content-end list-unstyled d-flex">
-		<span class="mb-3 mb-md-0 text-muted">&copy; <?php echo date('Y'); ?> Jethro Landa</span>
+		<span class="mb-3 mb-md-0">&copy; <?php echo date('Y'); ?> Jethro Landa</span>
     </div>
   </footer>
 </div><!-- #page -->

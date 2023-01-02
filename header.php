@@ -29,32 +29,27 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
+		<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+			<img class="logo" src="<?php echo get_bloginfo('template_url') ?>/images/jl.png"/>
+		</a>
 			<?php
-the_custom_logo();
-if (is_front_page() && is_home()):
-?>
-				<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name');?></a></h1>
-				<?php
-else:
-?>
-				<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name');?></a></p>
-				<?php
-endif;
+
 $portfolio_description = get_bloginfo('description', 'display');
 if ($portfolio_description || is_customize_preview()):
 ?>
-				<p class="site-description"><?php echo $portfolio_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped                ?></p>
+				<p class="site-description"><?php echo $portfolio_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped                             ?></p>
 			<?php endif;?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
+
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'portfolio');?></button>
 			<?php
 wp_nav_menu(
     array(
         'theme_location'  => 'menu-1',
         'menu_id'         => 'primary-menu',
-        'container_class' => 'd-flex flex-wrap justify-content-center py-3 mb-4 border-bottom',
+        'container_class' => 'd-flex flex-wrap justify-content-end py-3',
         'menu_class'      => 'nav nav-pills',
     )
 );

@@ -103,7 +103,28 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  
 
 // Custom CSS Starts HERE
-img.profile-picture{
-	border-radius: 50%;
-	width: 200px;
+body{
+	background: #47525d!important;
+	color: #adb5bd !important;
+
+	a, a:visited{
+		color: #fff;
+	}
+
+	img.profile-picture{
+		border-radius: 50%;
+    width: 200px;
+    margin: 15px 50px;
+	}
+
+	ul.list-group.list-group-flush{
+		margin: 0px!important;
+	}
+
+	#masthead{
+		display: grid;
+    grid-template-columns: repeat(2, 1fr);
+		margin-top: 40px;
+	}
+
 }
