@@ -195,8 +195,13 @@ if (class_exists('WooCommerce')) {
 
 function wpbootstrap_enqueue_styles()
 {
+
     wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css');
+
+    wp_enqueue_style('bootstrap-icons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css');
+
 }
+
 add_action('wp_enqueue_scripts', 'wpbootstrap_enqueue_styles');
 
 function add_additional_class_on_li($classes, $item, $args)
@@ -206,6 +211,7 @@ function add_additional_class_on_li($classes, $item, $args)
 
     return $classes;
 }
+
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 
 function add_menu_link_class($atts, $item, $args)
@@ -221,4 +227,5 @@ function add_menu_link_class($atts, $item, $args)
 
     return $atts;
 }
+
 add_filter('nav_menu_link_attributes', 'add_menu_link_class', 1, 3);

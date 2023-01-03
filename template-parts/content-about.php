@@ -17,7 +17,7 @@
 
     <div class="card mb-3 text-bg-dark">
       <div class="row g-0">
-        <div class="col-md-3">
+        <div class="col-md-3 profile-picture-wrapper">
           <img class="profile-picture" src="<?php echo get_bloginfo('template_url') ?>/images/jethro_profile_pic.jpg"/>
         </div>
         <div class="col-md-9">

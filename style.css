@@ -799,10 +799,15 @@ body {
   color: #adb5bd !important; }
   body a, body a:visited {
     color: #fff; }
+  body div.profile-picture-wrapper {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; }
   body img.profile-picture {
     border-radius: 50%;
-    width: 200px;
-    margin: 15px 50px; }
+    width: 200px; }
   body ul.list-group.list-group-flush {
     margin: 0px !important; }
   body #masthead {
