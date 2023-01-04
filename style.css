@@ -795,26 +795,38 @@ textarea {
   margin-bottom: 1.5em; }
 
 body {
-  background: #47525d !important;
-  color: #adb5bd !important; }
+  color: #adb5bd !important;
+  background-image: linear-gradient(#525789, #356e65); }
   body a, body a:visited, body a:hover {
     color: #fff; }
   body .nav-pills .nav-link.active {
     background: #212529 !important; }
   body .nav-pills .nav-link:hover, body .nav-pills .nav-link:focus {
     color: #929eaa; }
+  body .left-corner .cover-photo {
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    height: 160px;
+    width: 100%;
+    border-radius: 6px 6px 0px 0px;
+    background-image: url(images/cover_photo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -100px; }
   body .card-profile {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    padding-top: 40px; }
+    padding-top: 80px; }
     body .card-profile hr {
       width: 100%; }
   body img.profile-picture {
     border-radius: 50%;
     width: 200px;
-    border: 4px solid #47525d; }
+    border: 4px solid #47525d;
+    z-index: 1; }
   body ul.list-group.list-group-flush {
     margin: 0px !important; }
   body #masthead {

@@ -104,8 +104,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 // Custom CSS Starts HERE
 body{
-	background: #47525d!important;
+	// background: #47525d!important;
 	color: #adb5bd !important;
+	background-image: linear-gradient(#525789, #356e65);
 
 	a, a:visited, a:hover{
 		color: #fff;
@@ -121,12 +122,27 @@ body{
 	}
 
 	
+	.left-corner{
+		.cover-photo{
+			position: absolute;
+			top: 0px;
+			z-index: 1;
+			height: 160px;
+			width: 100%;
+			border-radius: 6px 6px 0px 0px;
+			background-image: url(images/cover_photo.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 0px -100px;
+		}
+	}
+
 	.card-profile{
 		display: flex;
     justify-content: center;
     align-items: center;
-		padding: 20px;
-		padding-top: 40px;
+    padding: 20px;
+    padding-top: 80px;
 
 		hr{
 			width: 100%;
@@ -137,6 +153,7 @@ body{
 		border-radius: 50%;
     width: 200px;
 		border: 4px solid #47525d;
+		z-index: 1;
 	}
 
 	ul.list-group.list-group-flush{
