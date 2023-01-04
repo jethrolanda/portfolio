@@ -19,7 +19,7 @@
       <div class="col-md-4">
         <div class="card text-bg-dark card-profile">
           <img class="profile-picture" src="<?php echo get_bloginfo('template_url') ?>/images/jethro_profile_pic.jpg"/>
-
+          <hr/>
           <div class="col-md-12">
             <h3>Jethro Landa</h3>
             <p><i class="bi bi-pin-map"></i> Negros Oriental, Philippines</p>
