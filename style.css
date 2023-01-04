@@ -797,11 +797,14 @@ textarea {
 body {
   background: #47525d !important;
   color: #adb5bd !important; }
-  body a, body a:visited {
+  body a, body a:visited, body a:hover {
     color: #fff; }
-  body div.profile-picture-wrapper {
+  body .nav-pills .nav-link.active {
+    background: #212529 !important; }
+  body .nav-pills .nav-link:hover, body .nav-pills .nav-link:focus {
+    color: #929eaa; }
+  body .card-profile {
     display: flex;
-    align-content: center;
     justify-content: center;
     align-items: center;
     padding: 20px; }
@@ -814,3 +817,17 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-top: 40px; }
+  body .upwork-icon {
+    width: 20px;
+    background-image: url(images/upwork-icon.png);
+    background-repeat: no-repeat;
+    height: 20px;
+    display: inline-block;
+    background-size: contain; }
+  body .onlinejobs-icon {
+    width: 20px;
+    background-image: url(images/oj-logo-icon.png);
+    background-repeat: no-repeat;
+    height: 20px;
+    display: inline-block;
+    background-size: contain; }

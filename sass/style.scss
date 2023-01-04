@@ -107,18 +107,28 @@ body{
 	background: #47525d!important;
 	color: #adb5bd !important;
 
-	a, a:visited{
+	a, a:visited, a:hover{
 		color: #fff;
 	}
 
-	div.profile-picture-wrapper{
+	.nav-pills .nav-link
+{
+		&.active{
+			background: #212529 !important;
+		}
+		&:hover,&:focus{
+			color: #929eaa;
+		}
+}
+
+	
+	.card-profile{
 		display: flex;
-    align-content: center;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+		padding: 20px;
 	}
-	
+
 	img.profile-picture{
 		border-radius: 50%;
     width: 200px;
@@ -134,4 +144,21 @@ body{
 		margin-top: 40px;
 	}
 
+	.upwork-icon{
+		width: 20px;
+    background-image: url(images/upwork-icon.png);
+		background-repeat: no-repeat;
+    height: 20px;
+    display: inline-block;
+    background-size: contain;
+	}
+
+	.onlinejobs-icon{
+		width: 20px;
+    background-image: url(images/oj-logo-icon.png);
+		background-repeat: no-repeat;
+    height: 20px;
+    display: inline-block;
+    background-size: contain;
+	}
 }
