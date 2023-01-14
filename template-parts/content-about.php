@@ -27,6 +27,7 @@
             <p><i class="bi bi-envelope"></i> <a href="mailto:jethrolanda@outlook.com">jethrolanda@outlook.com</a></p>
             <p><i class="bi bi-linkedin"></i> <a target="_blank" href="https://www.linkedin.com/in/jethro-landa-26736852/">Linkedin</a></p>
             <p><i class="bi bi-github"></i> <a target="_blank" href="https://github.com/jethrolanda">Github</a></p>
+            <p><i class="bi bi-stack-overflow"></i> <a target="_blank" href="https://stackoverflow.com/users/8977005/jethro">Stackoverflow</a></p>
             <p><i class="upwork-icon"></i> <a target="_blank" href="https://www.upwork.com/freelancers/~01f558084c49d14f15">Upwork</a></p>
             <p><i class="onlinejobs-icon"></i> <a target="_blank" href="https://www.onlinejobs.ph/jobseekers/info/97274">Onlinejobs.ph</a></p>
           </div>
@@ -39,7 +40,9 @@
           <div class="card-body">
             <p class="card-text">Hi, my name is Jethro Landa.</p>
             <p class="card-text">I am a Web Developer that specializes in wordpress plugin and theme development.</p>
-            <p class="card-text">I have a decade of working experience in making wordpress websites.</p>
+            <p class="card-text">I have almost a decade of working experience in making wordpress development.</p>
+            <p class="card-text">Already been to different companies that help me mold my developer skills.</p>
+            <p class="card-text">I am currently available and looking for full time job that is relevant to my specialty.</p>
           </div>
         </div>
 
