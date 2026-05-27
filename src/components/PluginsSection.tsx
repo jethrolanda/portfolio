@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 
 import { motion } from "framer-motion";
@@ -43,50 +42,6 @@ const PLUGINS = [
     version: "1.0.5"
   }
 ];
-=======
-import React from 'react';
-import { motion } from 'framer-motion';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LanguageIcon from '@mui/icons-material/Language';
-import DownloadIcon from '@mui/icons-material/Download';
-const PLUGINS = [
-{
-  name: 'SEO Lite Boost',
-  slug: 'seo-lite-boost',
-  description:
-  'A lightweight, zero-configuration SEO optimization plugin focused on core web vitals and automated metadata generation.',
-  tags: ['PHP', 'WordPress', 'React'],
-  installs: '10,000+',
-  version: '2.1.0'
-},
-{
-  name: 'WP Cache Sentry',
-  slug: 'wp-cache-sentry',
-  description:
-  'Advanced object caching and page caching solution with Redis integration and intelligent cache invalidation rules.',
-  tags: ['PHP', 'Redis', 'REST API'],
-  installs: '5,000+',
-  version: '1.4.2'
-},
-{
-  name: 'Form Forge',
-  slug: 'form-forge',
-  description:
-  'Drag-and-drop form builder utilizing the Block Editor (Gutenberg) API for seamless native WordPress integration.',
-  tags: ['JavaScript', 'React', 'Gutenberg'],
-  installs: '25,000+',
-  version: '3.0.1'
-},
-{
-  name: 'Custom Field Studio',
-  slug: 'custom-field-studio',
-  description:
-  'Developer-focused toolkit for registering complex meta boxes and custom fields via a fluent PHP API.',
-  tags: ['PHP', 'MySQL', 'Architecture'],
-  installs: '2,000+',
-  version: '1.0.5'
-}];
->>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
 
 export function PluginsSection() {
   return (
@@ -102,7 +57,6 @@ export function PluginsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-<<<<<<< HEAD
           {PLUGINS.map((plugin, index) => (
             <motion.div
               key={plugin.slug}
@@ -124,29 +78,6 @@ export function PluginsSection() {
               }}
               className="group bg-white border border-ink/10 p-8 hover:border-wpblue/50 transition-colors flex flex-col h-full"
             >
-=======
-          {PLUGINS.map((plugin, index) =>
-          <motion.div
-            key={plugin.slug}
-            initial={{
-              opacity: 0,
-              y: 20
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0
-            }}
-            viewport={{
-              once: true,
-              margin: '-100px'
-            }}
-            transition={{
-              duration: 0.5,
-              delay: index * 0.1
-            }}
-            className="group bg-white border border-ink/10 p-8 hover:border-wpblue/50 transition-colors flex flex-col h-full">
-            
->>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
               <div className="flex justify-between items-start mb-6">
                 <div>
                   <h3 className="text-xl font-bold mb-1">{plugin.name}</h3>
@@ -154,7 +85,6 @@ export function PluginsSection() {
                 </div>
                 <div className="flex gap-3 text-ink/40">
                   <a
-<<<<<<< HEAD
                     href="#"
                     className="hover:text-wpblue transition-colors"
                     aria-label="View on WP.org"
@@ -166,19 +96,6 @@ export function PluginsSection() {
                     className="hover:text-wpblue transition-colors"
                     aria-label="View Source"
                   >
-=======
-                  href="#"
-                  className="hover:text-wpblue transition-colors"
-                  aria-label="View on WP.org">
-                  
-                    <LanguageIcon fontSize="small" />
-                  </a>
-                  <a
-                  href="#"
-                  className="hover:text-wpblue transition-colors"
-                  aria-label="View Source">
-                  
->>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
                     <GitHubIcon fontSize="small" />
                   </a>
                 </div>
@@ -190,7 +107,6 @@ export function PluginsSection() {
 
               <div className="space-y-6 mt-auto">
                 <div className="flex flex-wrap gap-2">
-<<<<<<< HEAD
                   {plugin.tags.map((tag) => (
                     <span
                       key={tag}
@@ -199,16 +115,6 @@ export function PluginsSection() {
                       {tag}
                     </span>
                   ))}
-=======
-                  {plugin.tags.map((tag) =>
-                <span
-                  key={tag}
-                  className="font-mono text-xs px-2 py-1 bg-cream border border-ink/10 text-ink/70">
-                  
-                      {tag}
-                    </span>
-                )}
->>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
                 </div>
 
                 <div className="flex items-center justify-between pt-6 border-t border-ink/10 font-mono text-xs text-ink/60">
@@ -220,18 +126,9 @@ export function PluginsSection() {
                 </div>
               </div>
             </motion.div>
-<<<<<<< HEAD
           ))}
         </div>
       </div>
     </section>
   );
 }
-=======
-          )}
-        </div>
-      </div>
-    </section>);
-
-}
->>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9

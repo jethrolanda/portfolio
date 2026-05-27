@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 "use client";
 
 import { motion } from "framer-motion";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
-=======
-import React from 'react';
-import { motion } from 'framer-motion';
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
->>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
 export function HeroSection() {
   return (
     <section className="min-h-[80vh] flex items-center pt-20 pb-32">
@@ -25,13 +19,8 @@ export function HeroSection() {
             duration: 0.6,
             delay: 0.2
           }}
-<<<<<<< HEAD
           className="lg:col-span-8 space-y-8"
         >
-=======
-          className="lg:col-span-8 space-y-8">
-          
->>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
           <div className="space-y-4">
             <p className="font-mono text-wpblue text-sm md:text-base">
               &gt; Hello, world. I am
@@ -52,7 +41,6 @@ export function HeroSection() {
           <div className="flex flex-wrap items-center gap-4 pt-4">
             <a
               href="#plugins"
-<<<<<<< HEAD
               className="group flex items-center gap-2 bg-ink text-cream px-6 py-3 font-medium hover:bg-wpblue transition-colors"
             >
               View Plugins
@@ -65,20 +53,6 @@ export function HeroSection() {
               href="#contact"
               className="flex items-center gap-2 border border-ink/20 px-6 py-3 font-medium hover:border-ink transition-colors"
             >
-=======
-              className="group flex items-center gap-2 bg-ink text-cream px-6 py-3 font-medium hover:bg-wpblue transition-colors">
-              
-              View Plugins
-              <ArrowOutwardIcon
-                fontSize="small"
-                className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              
-            </a>
-            <a
-              href="#contact"
-              className="flex items-center gap-2 border border-ink/20 px-6 py-3 font-medium hover:border-ink transition-colors">
-              
->>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
               Get in Touch
             </a>
           </div>
@@ -97,13 +71,8 @@ export function HeroSection() {
             duration: 0.6,
             delay: 0.4
           }}
-<<<<<<< HEAD
           className="hidden lg:block lg:col-span-4"
         >
-=======
-          className="hidden lg:block lg:col-span-4">
-          
->>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
           <div className="relative">
             <div className="absolute inset-0 bg-wpblue/10 translate-x-4 translate-y-4 -z-10"></div>
             <div className="bg-white border border-ink/10 p-8 space-y-6">
@@ -132,12 +101,6 @@ export function HeroSection() {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
     </section>
   );
 }
-=======
-    </section>);
-
-}
->>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
