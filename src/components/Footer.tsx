@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 "use client";
 
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
-=======
-import React from 'react';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailIcon from '@mui/icons-material/Email';
->>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
 export function Footer() {
   return (
     <footer className="border-t border-ink/10 py-12 mt-24">
@@ -23,47 +16,26 @@ export function Footer() {
           <a
             href="#"
             className="text-ink/60 hover:text-wpblue transition-colors"
-<<<<<<< HEAD
             aria-label="GitHub"
           >
-=======
-            aria-label="GitHub">
-            
->>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
             <GitHubIcon fontSize="small" />
           </a>
           <a
             href="#"
             className="text-ink/60 hover:text-wpblue transition-colors"
-<<<<<<< HEAD
             aria-label="LinkedIn"
           >
-=======
-            aria-label="LinkedIn">
-            
->>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
             <LinkedInIcon fontSize="small" />
           </a>
           <a
             href="#"
             className="text-ink/60 hover:text-wpblue transition-colors"
-<<<<<<< HEAD
             aria-label="Email"
           >
-=======
-            aria-label="Email">
-            
->>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
             <EmailIcon fontSize="small" />
           </a>
         </div>
       </div>
-<<<<<<< HEAD
     </footer>
   );
 }
-=======
-    </footer>);
-
-}
->>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9

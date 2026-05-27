@@ -13,8 +13,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"]
 });
 
-const inter = Inter({ subsets: ["latin"] });
-const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"]
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"]
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
