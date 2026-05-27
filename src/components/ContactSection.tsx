@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
 import SendIcon from "@mui/icons-material/Send";
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { toast } from 'sonner';
+import SendIcon from '@mui/icons-material/Send';
+>>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
 export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -11,7 +18,11 @@ export function ContactSection() {
     // Mock API call
     setTimeout(() => {
       setIsSubmitting(false);
+<<<<<<< HEAD
       toast.success("Message sent successfully! I will get back to you soon.");
+=======
+      toast.success('Message sent successfully! I will get back to you soon.');
+>>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
       (e.target as HTMLFormElement).reset();
     }, 1000);
   };
@@ -41,8 +52,13 @@ export function ContactSection() {
             transition={{
               duration: 0.5
             }}
+<<<<<<< HEAD
             className="space-y-8"
           >
+=======
+            className="space-y-8">
+            
+>>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
             <p className="text-lg text-ink/70 leading-relaxed max-w-md">
               I'm currently available for freelance projects and open to new
               opportunities. Whether you have a question or just want to say hi,
@@ -54,8 +70,13 @@ export function ContactSection() {
                 <span className="text-ink/40 w-20">Email:</span>
                 <a
                   href="mailto:hello@example.com"
+<<<<<<< HEAD
                   className="hover:text-wpblue transition-colors"
                 >
+=======
+                  className="hover:text-wpblue transition-colors">
+                  
+>>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
                   hello@example.com
                 </a>
               </div>
@@ -89,18 +110,32 @@ export function ContactSection() {
             transition={{
               duration: 0.5,
               delay: 0.2
+<<<<<<< HEAD
             }}
           >
             <form
               onSubmit={handleSubmit}
               className="space-y-6 bg-white p-8 border border-ink/10"
             >
+=======
+            }}>
+            
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-6 bg-white p-8 border border-ink/10">
+              
+>>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label
                     htmlFor="name"
+<<<<<<< HEAD
                     className="font-mono text-xs text-ink/70 block"
                   >
+=======
+                    className="font-mono text-xs text-ink/70 block">
+                    
+>>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
                     Name
                   </label>
                   <input
@@ -108,14 +143,24 @@ export function ContactSection() {
                     id="name"
                     required
                     className="w-full bg-cream border border-ink/10 px-4 py-3 focus:outline-none focus:border-wpblue transition-colors font-sans"
+<<<<<<< HEAD
                     placeholder="John Doe"
                   />
+=======
+                    placeholder="John Doe" />
+                  
+>>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
                 </div>
                 <div className="space-y-2">
                   <label
                     htmlFor="email"
+<<<<<<< HEAD
                     className="font-mono text-xs text-ink/70 block"
                   >
+=======
+                    className="font-mono text-xs text-ink/70 block">
+                    
+>>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
                     Email
                   </label>
                   <input
@@ -123,16 +168,26 @@ export function ContactSection() {
                     id="email"
                     required
                     className="w-full bg-cream border border-ink/10 px-4 py-3 focus:outline-none focus:border-wpblue transition-colors font-sans"
+<<<<<<< HEAD
                     placeholder="john@example.com"
                   />
+=======
+                    placeholder="john@example.com" />
+                  
+>>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
                 </div>
               </div>
 
               <div className="space-y-2">
                 <label
                   htmlFor="subject"
+<<<<<<< HEAD
                   className="font-mono text-xs text-ink/70 block"
                 >
+=======
+                  className="font-mono text-xs text-ink/70 block">
+                  
+>>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
                   Subject
                 </label>
                 <input
@@ -140,15 +195,25 @@ export function ContactSection() {
                   id="subject"
                   required
                   className="w-full bg-cream border border-ink/10 px-4 py-3 focus:outline-none focus:border-wpblue transition-colors font-sans"
+<<<<<<< HEAD
                   placeholder="Project Inquiry"
                 />
+=======
+                  placeholder="Project Inquiry" />
+                
+>>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
               </div>
 
               <div className="space-y-2">
                 <label
                   htmlFor="message"
+<<<<<<< HEAD
                   className="font-mono text-xs text-ink/70 block"
                 >
+=======
+                  className="font-mono text-xs text-ink/70 block">
+                  
+>>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
                   Message
                 </label>
                 <textarea
@@ -156,22 +221,39 @@ export function ContactSection() {
                   required
                   rows={5}
                   className="w-full bg-cream border border-ink/10 px-4 py-3 focus:outline-none focus:border-wpblue transition-colors font-sans resize-y"
+<<<<<<< HEAD
                   placeholder="Tell me about your project..."
                 ></textarea>
+=======
+                  placeholder="Tell me about your project...">
+                </textarea>
+>>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
+<<<<<<< HEAD
                 className="w-full bg-ink text-cream py-4 font-medium hover:bg-wpblue transition-colors flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
+=======
+                className="w-full bg-ink text-cream py-4 font-medium hover:bg-wpblue transition-colors flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
+                
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+>>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
                 {!isSubmitting && <SendIcon fontSize="small" />}
               </button>
             </form>
           </motion.div>
         </div>
       </div>
+<<<<<<< HEAD
     </section>
   );
 }
+=======
+    </section>);
+
+}
+>>>>>>> 798832ad7c1243c9db575dbfe5d21fdc1bccf1b9
