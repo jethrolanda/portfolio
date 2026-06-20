@@ -25,16 +25,17 @@ export function HeroSection() {
               &gt; Hello, world. I am
             </p>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
-              Alex Developer.
+              Jethro Landa.
               <br />
-              <span className="text-ink/40">WordPress Architect.</span>
+              <span className="text-ink/40">WordPress Software Engineer.</span>
             </h1>
           </div>
 
           <p className="text-lg md:text-xl text-ink/70 max-w-2xl leading-relaxed">
-            I engineer robust, scalable WordPress plugins that power thousands
-            of websites. Specializing in complex integrations, performance
-            optimization, and clean architecture.
+            Experienced WordPress Software Engineer specializing in custom
+            plugin development, WooCommerce extensions, and API integrations. I
+            focus on building scalable, high-quality solutions that deliver
+            long-term value for businesses and their users.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-4">

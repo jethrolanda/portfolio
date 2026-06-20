@@ -2,47 +2,87 @@
 import { motion } from "framer-motion";
 const EXPERIENCE = [
   {
-    role: "Senior WordPress Developer",
-    company: "Agency XYZ",
-    period: "2021 — Present",
+    role: "WordPress Developer",
+    company: "Freelance (Remote)",
+    period: "Oct 2025 — Present",
     bullets: [
-      "Architected and maintained 15+ custom enterprise WordPress plugins.",
-      "Led the migration of legacy jQuery codebases to modern React/Gutenberg blocks.",
-      "Optimized database queries reducing average load times by 40%."
-    ]
-  },
-  {
-    role: "Plugin Developer",
-    company: "WP Solutions Inc.",
-    period: "2018 — 2021",
-    bullets: [
-      "Developed a premium e-commerce add-on with over 50,000 active installations.",
-      "Implemented complex REST API endpoints for headless WordPress setups.",
-      "Provided technical support and resolved critical security vulnerabilities."
+      "Built custom WordPress plugins for client-specific business requirements",
+      "Implemented REST API integrations with third-party services",
+      "Improved WCAG accessibility compliance and Core Web Vitals scores across client sites"
     ]
   },
   {
     role: "Web Developer",
-    company: "Freelance",
-    period: "2015 — 2018",
+    company: "Xammis/Fuellogic (Remote)",
+    period: "Oct 2023 — Aug 2025",
     bullets: [
-      "Built custom WordPress themes and simple utility plugins for small businesses.",
-      "Managed hosting, deployments, and regular maintenance for 30+ client sites."
+      "Developed specialized WordPress plugins and internal web app solutions for fuel management workflows",
+      "Integrated third-party REST APIs including fuel price data providers",
+      "Optimized website performance and improved Core Web Vitals scores",
+      "Maintained and enhanced existing codebases across multiple projects"
+    ]
+  },
+  {
+    role: "Software Engineer",
+    company: "Rymera Web Co (Remote)",
+    period: "Jan 2015 — July 2022",
+    bullets: [
+      "Built and maintained free and premium WooCommerce extension plugins used by thousands of customers",
+      "Handled full plugin lifecycle: feature planning, development, testing, releases, and documentation",
+      "Resolved customer support issues and fixed reported bugs across plugin versions",
+      "Worked in an Agile/Scrum team environment with regular sprint cycles"
+    ]
+  },
+  {
+    role: "Web Developer",
+    company: "Lancera (On-site)",
+    period: "Aug 2013 — Oct 2014",
+    bullets: [
+      "Converted PSD designs to WordPress using Underscores theme boilerplate, Bootstrap, and ACF",
+      "Deployed sites to production servers and handled ongoing maintenance and bug fixes"
     ]
   }
 ];
 
 const SKILLS = {
-  "WordPress Core": [
-    "Plugin API",
-    "Theme API",
+  "Primary Skills": [
+    "PHP",
+    "React JS",
+    "jQuery",
+    "AJAX",
+    "MySQL",
+    "WP Hooks",
     "REST API",
-    "Gutenberg Blocks",
-    "WP-CLI"
+    "Custom Blocks",
+    "Plugins",
+    "Themes"
   ],
-
-  Languages: ["PHP 8+", "JavaScript (ES6+)", "TypeScript", "SQL", "HTML/CSS"],
-  "Tools & Workflow": ["Git", "Composer", "npm/yarn", "Docker", "PHPUnit"]
+  "Tools & Workflow": [
+    "Git",
+    "Github Actions",
+    "Composer",
+    "NPM",
+    "WordPress Studio",
+    "Agile/Scrum",
+    "SDLC"
+  ],
+  "AI Tools": [
+    "ChatGPT",
+    "GitHub Copilot",
+    "Cursor",
+    "OpenAI Codex",
+    "Claude",
+    "Magic Patterns",
+    "Google Stitch"
+  ],
+  "Secondary Skills": [
+    "NextJs",
+    "Vercel",
+    "Laravel",
+    "React Native (Expo/Typescript)",
+    "Headless WP",
+    "WP GraphQL"
+  ]
 };
 export function ResumeSection() {
   return (
@@ -144,12 +184,14 @@ export function ResumeSection() {
               </h3>
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-bold text-ink">B.S. Computer Science</h4>
+                  <h4 className="font-bold text-ink">
+                    B.S. in Information Technology
+                  </h4>
                   <div className="font-mono text-sm text-ink/60 mt-1">
-                    University of Technology
+                    Silliman University
                   </div>
                   <div className="font-mono text-xs text-ink/40 mt-1">
-                    2011 — 2015
+                    2008 — 2012
                   </div>
                 </div>
               </div>

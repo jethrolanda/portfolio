@@ -5,40 +5,83 @@ import LanguageIcon from "@mui/icons-material/Language";
 import DownloadIcon from "@mui/icons-material/Download";
 const PLUGINS = [
   {
-    name: "SEO Lite Boost",
-    slug: "seo-lite-boost",
-    description:
-      "A lightweight, zero-configuration SEO optimization plugin focused on core web vitals and automated metadata generation.",
-    tags: ["PHP", "WordPress", "React"],
-    installs: "10,000+",
-    version: "2.1.0"
+    name: "Fuel Savings Calculator",
+    slug: "fuel-savings-calculator",
+    description: [
+      "Fuel savings calculator for fleets.",
+      "Generate PDF and option to send the report to any email via modal form.",
+      "WP Admin settings for storing email data and the generated pdf report.",
+      "Display all entries in a table with the option to delete or view the entry."
+    ],
+    tags: [
+      "PHP",
+      "MySQL",
+      "WordPress",
+      "React",
+      "Antdesign",
+      "Interactivity API",
+      "WP Blocks"
+    ],
+    installs: "0",
+    version: "1.0",
+    url: "https://github.com/jethrolanda/fuel-savings-calculator-slider"
   },
   {
-    name: "WP Cache Sentry",
-    slug: "wp-cache-sentry",
-    description:
-      "Advanced object caching and page caching solution with Redis integration and intelligent cache invalidation rules.",
-    tags: ["PHP", "Redis", "REST API"],
-    installs: "5,000+",
-    version: "1.4.2"
+    name: "USA Gas Prices",
+    slug: "usa-gas-prices",
+    description: [
+      "Fetches and displays historical US gas price data via third-party REST API.",
+      "Save the data in the server for caching",
+      "Perform WP Cron request every monday to get updated data",
+      "Add an interactive frontend USA map. Show gas prices for every state on click.",
+      "Create custom shortcodes and blocks for displaying data."
+    ],
+    tags: [
+      "PHP",
+      "WordPress",
+      "WP Cron",
+      "React",
+      "Antdesign",
+      "Interactivity API",
+      "WP Blocks"
+    ],
+    installs: "0",
+    version: "1.0",
+    url: "https://github.com/jethrolanda/usa-gas-prices"
   },
   {
-    name: "Form Forge",
-    slug: "form-forge",
-    description:
-      "Drag-and-drop form builder utilizing the Block Editor (Gutenberg) API for seamless native WordPress integration.",
-    tags: ["JavaScript", "React", "Gutenberg"],
-    installs: "25,000+",
-    version: "3.0.1"
+    name: "Rugby Explorer API",
+    slug: "rugby-explorer-api",
+    description: [
+      "Imports data from RugbyExplorer into Sportspress Events using Graphql API.",
+      "Properly map data into event CPT and meta data",
+      "Create custom shortcodes for displaying data.",
+      "Admin settings for adding teams and leagues to import, manual import button and other settings"
+    ],
+    tags: [
+      "PHP",
+      "WordPress",
+      "WP Cron",
+      "Action Scheduler",
+      "React",
+      "Antdesign"
+    ],
+    installs: "0",
+    version: "1.0",
+    url: "https://github.com/jethrolanda/rugbyexplorer-api"
   },
   {
-    name: "Custom Field Studio",
-    slug: "custom-field-studio",
-    description:
-      "Developer-focused toolkit for registering complex meta boxes and custom fields via a fluent PHP API.",
-    tags: ["PHP", "MySQL", "Architecture"],
-    installs: "2,000+",
-    version: "1.0.5"
+    name: "AI Match Writer",
+    slug: "ai-match-writer",
+    description: [
+      "WordPress plugin that uses Open AI API to auto-generate match preview and result posts for Sportspress events.",
+      "WP Cron job that runs every day to check for upcoming events and generate content based on the teams playing, recent form, and other relevant data.",
+      "WP admin settings for adding Open AI API key, models and prompt."
+    ],
+    tags: ["PHP", "WordPress", "WP Cron", "React", "Antdesign"],
+    installs: "0",
+    version: "1.0",
+    url: "https://github.com/jethrolanda/ai-match-writer"
   }
 ];
 
@@ -84,14 +127,8 @@ export function PluginsSection() {
                 </div>
                 <div className="flex gap-3 text-ink/40">
                   <a
-                    href="#"
-                    className="hover:text-wpblue transition-colors"
-                    aria-label="View on WP.org"
-                  >
-                    <LanguageIcon fontSize="small" />
-                  </a>
-                  <a
-                    href="#"
+                    target="_blank"
+                    href={plugin.url}
                     className="hover:text-wpblue transition-colors"
                     aria-label="View Source"
                   >
@@ -100,9 +137,12 @@ export function PluginsSection() {
                 </div>
               </div>
 
-              <p className="text-ink/70 mb-8 flex-grow leading-relaxed">
-                {plugin.description}
-              </p>
+              {/* <p className="text-ink/70 mb-8 flex-grow leading-relaxed"></p> */}
+              <ul className="list-disc pl-5 text-gray-700 mb-8">
+                {plugin.description.map((desc, i) => (
+                  <li key={i}>{desc}</li>
+                ))}
+              </ul>
 
               <div className="space-y-6 mt-auto">
                 <div className="flex flex-wrap gap-2">

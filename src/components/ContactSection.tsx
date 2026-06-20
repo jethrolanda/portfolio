@@ -54,22 +54,30 @@ export function ContactSection() {
               <div className="flex items-center gap-4">
                 <span className="text-ink/40 w-20">Email:</span>
                 <a
-                  href="mailto:hello@example.com"
+                  href="mailto:jemaq_lan@hotmail.com"
                   className="hover:text-wpblue transition-colors"
                 >
-                  hello@example.com
+                  jemaq_lan@hotmail.com
                 </a>
               </div>
               <div className="flex items-center gap-4">
                 <span className="text-ink/40 w-20">GitHub:</span>
-                <a href="#" className="hover:text-wpblue transition-colors">
-                  github.com/alexdev
+                <a
+                  target="_blank"
+                  href="https://github.com/jethrolanda"
+                  className="hover:text-wpblue transition-colors"
+                >
+                  github.com/jethrolanda
                 </a>
               </div>
               <div className="flex items-center gap-4">
                 <span className="text-ink/40 w-20">LinkedIn:</span>
-                <a href="#" className="hover:text-wpblue transition-colors">
-                  linkedin.com/in/alexdev
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/jethro-landa/"
+                  className="hover:text-wpblue transition-colors"
+                >
+                  linkedin.com/in/jethro-landa
                 </a>
               </div>
             </div>
