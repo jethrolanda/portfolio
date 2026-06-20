@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 export function HeroSection() {

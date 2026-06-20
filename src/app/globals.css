@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --color-cream: #f7f3ef;
+  --color-ink: #141115;
+  --color-wpblue: #2f61ff;
+}
+
 html {
   scroll-behavior: smooth;
 }

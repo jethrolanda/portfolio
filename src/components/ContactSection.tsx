@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
 import SendIcon from "@mui/icons-material/Send";
