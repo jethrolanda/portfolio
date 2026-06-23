@@ -196,6 +196,20 @@ export function ResumeSection() {
                 </div>
               </div>
             </div>
+            <div>
+              <h3 className="font-mono text-lg font-medium border-b border-ink/10 pb-4 mb-8">
+                Resume
+              </h3>
+              <div>
+                <a
+                  href="https://docs.google.com/document/d/1IH9xEQA_5pBgvBQSx10koxvzb44GrSzZ4mni_q_OTng/edit?tab=t.0"
+                  target="_blank"
+                  className="font-mono text-sm text-wpblue hover:text-wpblue/80 transition-colors"
+                >
+                  Google Doc
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
