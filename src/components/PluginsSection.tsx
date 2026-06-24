@@ -19,8 +19,8 @@ const PLUGINS = [
       "WordPress",
       "React",
       "Antdesign",
-      "Interactivity API",
-      "WP Blocks"
+      "WP Blocks",
+      "Interactivity API"
     ],
     installs: "0",
     version: "1.0",
@@ -42,8 +42,9 @@ const PLUGINS = [
       "WP Cron",
       "React",
       "Antdesign",
+      "WP Blocks",
       "Interactivity API",
-      "WP Blocks"
+      "REST API"
     ],
     installs: "0",
     version: "1.0",
@@ -64,7 +65,8 @@ const PLUGINS = [
       "WP Cron",
       "Action Scheduler",
       "React",
-      "Antdesign"
+      "Antdesign",
+      "GraphQL API"
     ],
     installs: "0",
     version: "1.0",
@@ -78,7 +80,15 @@ const PLUGINS = [
       "WP Cron job that runs every day to check for upcoming events and generate content based on the teams playing, recent form, and other relevant data.",
       "WP admin settings for adding Open AI API key, models and prompt."
     ],
-    tags: ["PHP", "WordPress", "WP Cron", "React", "Antdesign"],
+    tags: [
+      "PHP",
+      "WordPress",
+      "WP Cron",
+      "React",
+      "Antdesign",
+      "Open AI API",
+      "REST API"
+    ],
     installs: "0",
     version: "1.0",
     url: "https://github.com/jethrolanda/ai-match-writer"
