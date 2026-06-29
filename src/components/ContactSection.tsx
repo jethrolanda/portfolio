@@ -1,23 +1,23 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { toast } from "sonner";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 const EMAIL = "jemaq_lan@hotmail.com";
 const LINKS = [
   {
     label: "GitHub",
-    handle: "github.com/jethrolanda",
+    handle: "https://github.com/jethrolanda/",
     href: "#",
     icon: GitHubIcon
   },
   {
     label: "LinkedIn",
-    handle: "linkedin.com/in/jethro-landa",
+    handle: "https://www.linkedin.com/in/jethro-landa/",
     href: "#",
     icon: LinkedInIcon
   }
@@ -123,7 +123,9 @@ export function ContactSection() {
                 return (
                   <a
                     key={link.label}
-                    href={link.href}
+                    href={link.handle}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group flex items-center justify-between p-5 hover:bg-cream transition-colors"
                   >
                     <span className="flex items-center gap-4">
@@ -139,7 +141,7 @@ export function ContactSection() {
                     </span>
                     <ArrowOutwardIcon
                       fontSize="small"
-                      className="text-ink/30 group-hover:text-wpblue group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
+                      className="text-ink/30 group-hover:text-wpblue transition-colors"
                     />
                   </a>
                 );
