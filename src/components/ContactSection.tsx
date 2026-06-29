@@ -1,20 +1,36 @@
 "use client";
 
-import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
-import SendIcon from "@mui/icons-material/Send";
+import EmailIcon from "@mui/icons-material/Email";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+const EMAIL = "jemaq_lan@hotmail.com";
+const LINKS = [
+  {
+    label: "GitHub",
+    handle: "github.com/jethrolanda",
+    href: "#",
+    icon: GitHubIcon
+  },
+  {
+    label: "LinkedIn",
+    handle: "linkedin.com/in/jethro-landa",
+    href: "#",
+    icon: LinkedInIcon
+  }
+];
+
 export function ContactSection() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    // Mock API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      toast.success("Message sent successfully! I will get back to you soon.");
-      (e.target as HTMLFormElement).reset();
-    }, 1000);
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      toast.success("Email copied to clipboard");
+    } catch {
+      toast.error("Could not copy — please copy manually");
+    }
   };
   return (
     <section id="contact" className="py-24 border-t border-ink/10">
@@ -46,40 +62,16 @@ export function ContactSection() {
           >
             <p className="text-lg text-ink/70 leading-relaxed max-w-md">
               I'm currently available for freelance projects and open to new
-              opportunities. Whether you have a question or just want to say hi,
-              I'll try my best to get back to you!
+              opportunities. The fastest way to reach me is by email — I usually
+              reply within a day.
             </p>
 
-            <div className="space-y-4 font-mono text-sm">
-              <div className="flex items-center gap-4">
-                <span className="text-ink/40 w-20">Email:</span>
-                <a
-                  href="mailto:jemaq_lan@hotmail.com"
-                  className="hover:text-wpblue transition-colors"
-                >
-                  jemaq_lan@hotmail.com
-                </a>
-              </div>
-              <div className="flex items-center gap-4">
-                <span className="text-ink/40 w-20">GitHub:</span>
-                <a
-                  target="_blank"
-                  href="https://github.com/jethrolanda"
-                  className="hover:text-wpblue transition-colors"
-                >
-                  github.com/jethrolanda
-                </a>
-              </div>
-              <div className="flex items-center gap-4">
-                <span className="text-ink/40 w-20">LinkedIn:</span>
-                <a
-                  target="_blank"
-                  href="https://www.linkedin.com/in/jethro-landa/"
-                  className="hover:text-wpblue transition-colors"
-                >
-                  linkedin.com/in/jethro-landa
-                </a>
-              </div>
+            <div className="inline-flex items-center gap-2 font-mono text-xs px-3 py-2 bg-white border border-ink/10">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-600"></span>
+              </span>
+              <span className="text-ink/70">Available for new work</span>
             </div>
           </motion.div>
 
@@ -99,85 +91,60 @@ export function ContactSection() {
               duration: 0.5,
               delay: 0.2
             }}
+            className="space-y-4"
           >
-            <form
-              onSubmit={handleSubmit}
-              className="space-y-6 bg-white p-8 border border-ink/10"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label
-                    htmlFor="name"
-                    className="font-mono text-xs text-ink/70 block"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    required
-                    className="w-full bg-cream border border-ink/10 px-4 py-3 focus:outline-none focus:border-wpblue transition-colors font-sans"
-                    placeholder="John Doe"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label
-                    htmlFor="email"
-                    className="font-mono text-xs text-ink/70 block"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    required
-                    className="w-full bg-cream border border-ink/10 px-4 py-3 focus:outline-none focus:border-wpblue transition-colors font-sans"
-                    placeholder="john@example.com"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label
-                  htmlFor="subject"
-                  className="font-mono text-xs text-ink/70 block"
-                >
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  required
-                  className="w-full bg-cream border border-ink/10 px-4 py-3 focus:outline-none focus:border-wpblue transition-colors font-sans"
-                  placeholder="Project Inquiry"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label
-                  htmlFor="message"
-                  className="font-mono text-xs text-ink/70 block"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  required
-                  rows={5}
-                  className="w-full bg-cream border border-ink/10 px-4 py-3 focus:outline-none focus:border-wpblue transition-colors font-sans resize-y"
-                  placeholder="Tell me about your project..."
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-ink text-cream py-4 font-medium hover:bg-wpblue transition-colors flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+            {/* Primary email card */}
+            <div className="bg-ink text-cream p-8">
+              <span className="font-mono text-xs text-cream/50 block mb-4">
+                // drop me a line
+              </span>
+              <a
+                href={`mailto:${EMAIL}`}
+                className="group flex items-center gap-3 text-2xl md:text-3xl font-bold tracking-tight hover:text-wpblue transition-colors break-all"
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
-                {!isSubmitting && <SendIcon fontSize="small" />}
+                <EmailIcon />
+                {EMAIL}
+                <ArrowOutwardIcon className="opacity-0 group-hover:opacity-100 transition-opacity" />
+              </a>
+              <button
+                type="button"
+                onClick={handleCopy}
+                className="mt-6 inline-flex items-center gap-2 font-mono text-xs text-cream/70 hover:text-cream border border-cream/20 hover:border-cream/50 px-3 py-2 transition-colors"
+              >
+                <ContentCopyIcon fontSize="inherit" />
+                Copy address
               </button>
-            </form>
+            </div>
+
+            {/* Secondary links */}
+            <div className="bg-white border border-ink/10 divide-y divide-ink/10">
+              {LINKS.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="group flex items-center justify-between p-5 hover:bg-cream transition-colors"
+                  >
+                    <span className="flex items-center gap-4">
+                      <Icon fontSize="small" className="text-ink/60" />
+                      <span>
+                        <span className="block font-medium text-sm">
+                          {link.label}
+                        </span>
+                        <span className="block font-mono text-xs text-ink/50">
+                          {link.handle}
+                        </span>
+                      </span>
+                    </span>
+                    <ArrowOutwardIcon
+                      fontSize="small"
+                      className="text-ink/30 group-hover:text-wpblue group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
+                    />
+                  </a>
+                );
+              })}
+            </div>
           </motion.div>
         </div>
       </div>
