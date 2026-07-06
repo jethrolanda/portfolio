@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import LanguageIcon from "@mui/icons-material/Language";
 import DownloadIcon from "@mui/icons-material/Download";
 const PLUGINS = [
   {

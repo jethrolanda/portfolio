@@ -4,7 +4,6 @@ import { toast } from "sonner";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 const EMAIL = "jemaq_lan@hotmail.com";

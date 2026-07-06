@@ -73,7 +73,8 @@ const SKILLS = {
     "OpenAI Codex",
     "Claude",
     "Magic Patterns",
-    "Google Stitch"
+    "Google Stitch",
+    "Novamira"
   ],
   "Secondary Skills": [
     "NextJs",
