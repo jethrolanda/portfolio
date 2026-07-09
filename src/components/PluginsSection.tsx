@@ -85,8 +85,8 @@ const PLUGINS = [
       "WP Cron",
       "React",
       "Antdesign",
-      "Open AI API",
-      "REST API"
+      "AI",
+      "Open AI API"
     ],
     installs: "0",
     version: "1.0",

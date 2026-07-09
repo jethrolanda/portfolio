@@ -8,7 +8,10 @@ const EXPERIENCE = [
     bullets: [
       "Built custom WordPress plugins for client-specific business requirements",
       "Implemented REST API integrations with third-party services",
-      "Improved WCAG accessibility compliance and Core Web Vitals scores across client sites"
+      "Improved WCAG accessibility compliance and Core Web Vitals scores across client sites",
+      "Actively upskilling in AI-assisted software engineering and modern WordPress development workflows.",
+      "Hands-on experience with Claude Code to accelerate development, code generation, debugging, and refactoring.",
+      "Learning and integrating Model Context Protocol (MCP) tools, including Novamira MCP and Figma MCP, into WordPress development workflows."
     ]
   },
   {
@@ -71,7 +74,7 @@ const SKILLS = {
     "GitHub Copilot",
     "Cursor",
     "OpenAI Codex",
-    "Claude",
+    "Claude Code",
     "Magic Patterns",
     "Google Stitch",
     "Novamira"
