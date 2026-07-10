@@ -11,7 +11,7 @@ const EXPERIENCE = [
       "Improved WCAG accessibility compliance and Core Web Vitals scores across client sites",
       "Actively upskilling in AI-assisted software engineering and modern WordPress development workflows.",
       "Hands-on experience with Claude Code to accelerate development, code generation, debugging, and refactoring.",
-      "Learning and integrating Model Context Protocol (MCP) tools, including Novamira MCP and Figma MCP, into WordPress development workflows."
+      "Actively learning and integrating Model Context Protocol (MCP) into real WordPress development workflows — including Novamira MCP for executing WordPress actions directly from AI agents, Figma MCP for design-to-code handoff, WordPress MCP Server for exposing site content to AI tools, and Block MCP for Gutenberg block development assistance."
     ]
   },
   {
