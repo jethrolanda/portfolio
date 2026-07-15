@@ -22,7 +22,9 @@ const EXPERIENCE = [
       "Developed specialized WordPress plugins and internal web app solutions for fuel management workflows",
       "Integrated third-party REST APIs including fuel price data providers",
       "Optimized website performance and improved Core Web Vitals scores",
-      "Maintained and enhanced existing codebases across multiple projects"
+      "Maintained and enhanced existing codebases across multiple projects",
+      "Integrated WordPress with HubSpot CRM using its REST API to fetch and push customer, contact, and deal data between platforms, ensuring accurate, real-time data synchronization. Built custom API connections to automate the exchange of information between the website and CRM, streamlining data flow and reducing manual entry across sales and marketing processes.",
+      "Continuously expanded technical skill set during my time at Xammis/FuelLogic by studying Ruby, Laravel, React Native (Expo), Next.js, and Tailwind CSS — broadening my development capabilities beyond WordPress and PHP to stay adaptable across modern web and mobile technologies."
     ]
   },
   {

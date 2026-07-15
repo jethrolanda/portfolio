@@ -10,7 +10,7 @@ const PLUGINS = [
       "Fuel savings calculator for fleets.",
       "Generate PDF and option to send the report to any email via modal form.",
       "WP Admin settings for storing email data and the generated pdf report.",
-      "Display all entries in a table with the option to delete or view the entry."
+      "Display all entries in a table with the option to delete or view the entry. Option to export data."
     ],
     tags: [
       "PHP",
