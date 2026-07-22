@@ -44,7 +44,8 @@ const EXPERIENCE = [
     period: "Aug 2013 — Oct 2014",
     bullets: [
       "Converted PSD designs to WordPress using Underscores theme boilerplate, Twitter Bootstrap, and ACF",
-      "Deployed sites to production servers and handled ongoing maintenance and bug fixes"
+      "Deployed sites to production servers and handled ongoing maintenance and bug fixes",
+      "Continuously upskill on the latest technologies and development practices to stay current in a fast-evolving industry."
     ]
   }
 ];
