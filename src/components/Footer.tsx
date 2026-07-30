@@ -6,8 +6,7 @@ export function Footer() {
     <footer className="border-t border-ink/10 py-12 mt-24">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="font-mono text-sm text-ink/60">
-          &copy; {new Date().getFullYear()} WordPress Plugin Developer. All
-          rights reserved.
+          &copy; {new Date().getFullYear()} Jethro Landa. All rights reserved.
         </div>
 
         <div className="flex items-center gap-6">
