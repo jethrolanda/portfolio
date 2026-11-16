@@ -1,14 +1,170 @@
 @import "tailwindcss";
 
-@theme {
-  --color-cream: #f7f3ef;
-  --color-ink: #141115;
-  --color-wpblue: #2f61ff;
+/* ------------------------------------------------------------------
+   Design tokens
+   Dark is the default (also the no-JS fallback). A tiny inline script in
+   layout.tsx sets data-theme="light" | "dark" before first paint.
+   Contrast (WCAG AA): fg/bg >= 12:1, muted/bg >= 7:1, accent/bg >= 5:1.
+   ------------------------------------------------------------------ */
+:root {
+  color-scheme: dark;
+
+  /* colour */
+  --bg: #0b0d12;
+  --surface: #12151c;
+  --surface-2: #1a1e28;
+  --line: #262b37;
+  --fg: #e9ecf2;
+  --muted: #a4acbc;
+  --accent: #7c9bff; /* the single accent */
+  --accent-fg: #0b0d12; /* text on solid accent */
+  --success: #4ade80;
+
+  /* spacing scale (4px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-section: clamp(4rem, 3rem + 5vw, 7rem);
+
+  /* shape + motion */
+  --radius: 0.75rem;
+  --radius-sm: 0.5rem;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --dur: 180ms;
+  --nav-h: 4rem;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f8f9fb;
+  --surface: #ffffff;
+  --surface-2: #f0f2f6;
+  --line: #dfe3ea;
+  --fg: #10131a;
+  --muted: #4a5365;
+  --accent: #2d4fd6;
+  --accent-fg: #ffffff;
+  --success: #15803d;
+}
+
+/* Expose tokens as Tailwind utilities: bg-bg, bg-surface, text-fg, text-muted,
+   text-accent, border-line, font-sans, font-mono, text-display, ... */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-success: var(--success);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
+
+  --radius-DEFAULT: var(--radius);
+  --radius-sm: var(--radius-sm);
+
+  /* type scale (fluid for display + headings) */
+  --text-display: clamp(2.25rem, 1.5rem + 3.4vw, 3.75rem);
+  --text-display--line-height: 1.08;
+  --text-display--letter-spacing: -0.03em;
+  --text-h2: clamp(1.75rem, 1.4rem + 1.4vw, 2.5rem);
+  --text-h2--line-height: 1.15;
+  --text-h2--letter-spacing: -0.02em;
+  --text-h3: 1.25rem;
+  --text-h3--line-height: 1.35;
+  --text-lead: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
+  --text-lead--line-height: 1.6;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + 1rem);
 }
+
 body {
-  @apply bg-cream text-ink font-sans antialiased selection:bg-wpblue selection:text-white;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+
+/* Visible keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ------------------------------------------------------------------
+   Layout primitives
+   ------------------------------------------------------------------ */
+@utility container-page {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+@utility section-y {
+  padding-block: var(--space-section);
+}
+
+/* Skip link: hidden until focused */
+.skip-link {
+  position: fixed;
+  left: var(--space-4);
+  top: var(--space-4);
+  z-index: 100;
+  padding: var(--space-2) var(--space-4);
+  background: var(--accent);
+  color: var(--accent-fg);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transform: translateY(-200%);
+  transition: transform var(--dur) var(--ease);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Subtle scroll-reveal (toggled by a small IntersectionObserver later) */
+@media (prefers-reduced-motion: no-preference) {
+  /* data-theme is only set by JS, so no-JS visitors always see content */
+  html[data-theme] .reveal {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 400ms var(--ease), transform 400ms var(--ease);
+  }
+  html[data-theme] .reveal[data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -1,152 +1,92 @@
-"use client";
-import { motion } from "framer-motion";
-import { toast } from "sonner";
-import EmailIcon from "@mui/icons-material/Email";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
-const EMAIL = "jemaq_lan@hotmail.com";
+import { SectionHeading } from "./ui/SectionHeading";
+import { CopyEmailButton } from "./ui/CopyEmailButton";
+import {
+  ArrowUpRightIcon,
+  GitHubIcon,
+  LinkedInIcon,
+  MailIcon
+} from "./ui/icons";
+
+export const EMAIL = "jemaq_lan@hotmail.com";
+export const GITHUB_URL = "https://github.com/jethrolanda";
+export const LINKEDIN_URL = "https://www.linkedin.com/in/jethro-landa/";
+
 const LINKS = [
-  {
-    label: "GitHub",
-    handle: "https://github.com/jethrolanda/",
-    href: "#",
-    icon: GitHubIcon
-  },
-  {
-    label: "LinkedIn",
-    handle: "https://www.linkedin.com/in/jethro-landa/",
-    href: "#",
-    icon: LinkedInIcon
-  }
+  { label: "GitHub", href: GITHUB_URL, icon: GitHubIcon },
+  { label: "LinkedIn", href: LINKEDIN_URL, icon: LinkedInIcon }
 ];
 
 export function ContactSection() {
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(EMAIL);
-      toast.success("Email copied to clipboard");
-    } catch {
-      toast.error("Could not copy — please copy manually");
-    }
-  };
   return (
-    <section id="contact" className="py-24 border-t border-ink/10">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="mb-16">
-          <span className="font-mono text-wpblue text-sm mb-2 block">
-            03 / Connect
-          </span>
-          <h2 className="text-4xl font-bold tracking-tight">Get in Touch</h2>
-        </div>
+    <section
+      id="contact"
+      aria-labelledby="contact-title"
+      className="section-y border-t border-line"
+    >
+      <div className="container-page">
+        <SectionHeading
+          kicker="03 / Contact"
+          title="Get in touch"
+          id="contact-title"
+        />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <motion.div
-            initial={{
-              opacity: 0,
-              x: -20
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0
-            }}
-            viewport={{
-              once: true
-            }}
-            transition={{
-              duration: 0.5
-            }}
-            className="space-y-8"
-          >
-            <p className="text-lg text-ink/70 leading-relaxed max-w-md">
-              I'm currently available for freelance projects and open to new
-              opportunities. The fastest way to reach me is by email — I usually
-              reply within a day.
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="space-y-6">
+            <p className="max-w-md text-lead text-muted">
+              I&rsquo;m currently available for freelance projects and open to
+              new opportunities. The fastest way to reach me is by email — I
+              usually reply within a day.
             </p>
+            <p className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1.5 font-mono text-xs text-muted">
+              <span
+                aria-hidden="true"
+                className="h-2 w-2 rounded-full bg-success"
+              />
+              Available for new work
+            </p>
+          </div>
 
-            <div className="inline-flex items-center gap-2 font-mono text-xs px-3 py-2 bg-white border border-ink/10">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"></span>
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-600"></span>
-              </span>
-              <span className="text-ink/70">Available for new work</span>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{
-              opacity: 0,
-              x: 20
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0
-            }}
-            viewport={{
-              once: true
-            }}
-            transition={{
-              duration: 0.5,
-              delay: 0.2
-            }}
-            className="space-y-4"
-          >
-            {/* Primary email card */}
-            <div className="bg-ink text-cream p-8">
-              <span className="font-mono text-xs text-cream/50 block mb-4">
+          <div className="space-y-4">
+            <div className="rounded-[var(--radius)] border border-line bg-surface p-6 sm:p-8">
+              <p className="mb-3 font-mono text-xs text-muted">
                 // drop me a line
-              </span>
+              </p>
               <a
                 href={`mailto:${EMAIL}`}
-                className="group flex items-center gap-3 text-2xl md:text-3xl font-bold tracking-tight hover:text-wpblue transition-colors break-all"
+                className="inline-flex items-center gap-3 break-all text-xl font-bold transition-colors duration-[var(--dur)] hover:text-accent sm:text-2xl"
               >
-                <EmailIcon />
+                <MailIcon width={24} height={24} className="shrink-0" />
                 {EMAIL}
-                <ArrowOutwardIcon className="opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
-              <button
-                type="button"
-                onClick={handleCopy}
-                className="mt-6 inline-flex items-center gap-2 font-mono text-xs text-cream/70 hover:text-cream border border-cream/20 hover:border-cream/50 px-3 py-2 transition-colors"
-              >
-                <ContentCopyIcon fontSize="inherit" />
-                Copy address
-              </button>
+              <div className="mt-5">
+                <CopyEmailButton email={EMAIL} />
+              </div>
             </div>
 
-            {/* Secondary links */}
-            <div className="bg-white border border-ink/10 divide-y divide-ink/10">
-              {LINKS.map((link) => {
-                const Icon = link.icon;
-                return (
+            <ul className="divide-y divide-line overflow-hidden rounded-[var(--radius)] border border-line bg-surface">
+              {LINKS.map(({ label, href, icon: Icon }) => (
+                <li key={label}>
                   <a
-                    key={link.label}
-                    href={link.handle}
+                    href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center justify-between p-5 hover:bg-cream transition-colors"
+                    aria-label={`${label} (opens in a new tab)`}
+                    className="group flex items-center justify-between p-4 transition-colors duration-[var(--dur)] hover:bg-surface-2"
                   >
-                    <span className="flex items-center gap-4">
-                      <Icon fontSize="small" className="text-ink/60" />
-                      <span>
-                        <span className="block font-medium text-sm">
-                          {link.label}
-                        </span>
-                        <span className="block font-mono text-xs text-ink/50">
-                          {link.handle}
-                        </span>
-                      </span>
+                    <span className="flex items-center gap-3">
+                      <Icon className="text-muted" />
+                      <span className="text-sm font-medium">{label}</span>
                     </span>
-                    <ArrowOutwardIcon
-                      fontSize="small"
-                      className="text-ink/30 group-hover:text-wpblue transition-colors"
+                    <ArrowUpRightIcon
+                      width={16}
+                      height={16}
+                      className="text-muted transition-colors group-hover:text-accent"
                     />
                   </a>
-                );
-              })}
-            </div>
-          </motion.div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>

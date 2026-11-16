@@ -1,105 +1,103 @@
-"use client";
-import { motion } from "framer-motion";
-import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+import { ButtonLink } from "./ui/ButtonLink";
+import { ArrowUpRightIcon, DownloadIcon } from "./ui/icons";
+
+export const RESUME_PDF = "/Jethro-Landa-Resume.pdf";
+
+const PROOF = [
+  { value: "10+", label: "years of experience" },
+  { value: "7", label: "years building WooCommerce plugins" }
+];
+
+const STATUS = [
+  { key: "role", value: "Senior Web Developer" },
+  { key: "focus", value: "WordPress, React & REST API" },
+  { key: "location", value: "Remote" }
+];
+
+// Server component: no client JS, so the headline (LCP) paints immediately.
 export function HeroSection() {
   return (
-    <section className="min-h-[80vh] flex items-center pt-20 pb-32">
-      <div className="max-w-6xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <motion.div
-          initial={{
-            opacity: 0,
-            x: -20
-          }}
-          animate={{
-            opacity: 1,
-            x: 0
-          }}
-          transition={{
-            duration: 0.6,
-            delay: 0.2
-          }}
-          className="lg:col-span-8 space-y-8"
-        >
-          <div className="space-y-4">
-            <p className="font-mono text-wpblue text-sm md:text-base">
-              &gt; Hello, world. I am
-            </p>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
-              Jethro Landa.
-              <br />
-              <span className="text-ink/40">WordPress Software Engineer.</span>
-            </h1>
-          </div>
-
-          <p className="text-lg md:text-xl text-ink/70 max-w-2xl leading-relaxed">
-            Experienced WordPress Software Engineer specializing in custom
-            plugin development, WooCommerce extensions, and API integrations. I
-            focus on building scalable, high-quality solutions that deliver
-            long-term value for businesses and their users.
+    <section id="top" className="pb-[var(--space-section)] pt-12 sm:pt-20">
+      <div className="container-page grid items-center gap-12 lg:grid-cols-12">
+        <div className="lg:col-span-7">
+          <p className="mb-4 font-mono text-sm text-accent">Jethro Landa</p>
+          <h1 className="text-display font-bold">
+            Senior Web Developer:{" "}
+            <span className="text-accent">WordPress &amp; React</span>
+          </h1>
+          <p className="mt-6 max-w-xl text-lead text-muted">
+            I build custom plugins, WooCommerce extensions and API integrations
+            for WordPress, and I&rsquo;m building with React and Next.js.
           </p>
 
-          <div className="flex flex-wrap items-center gap-4 pt-4">
-            <a
-              href="#plugins"
-              className="group flex items-center gap-2 bg-ink text-cream px-6 py-3 font-medium hover:bg-wpblue transition-colors"
-            >
-              View Plugins
-              <ArrowOutwardIcon
-                fontSize="small"
-                className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-              />
-            </a>
-            <a
-              href="#contact"
-              className="flex items-center gap-2 border border-ink/20 px-6 py-3 font-medium hover:border-ink transition-colors"
-            >
-              Get in Touch
-            </a>
-          </div>
-        </motion.div>
+          <dl className="mt-8 grid gap-4 border-y border-line py-6 sm:grid-cols-3">
+            {PROOF.map((p) => (
+              <div key={p.value} className="flex items-baseline gap-3 sm:block">
+                <dt className="shrink-0 font-mono text-2xl font-bold text-fg">
+                  {p.value}
+                </dt>
+                <dd className="text-sm leading-snug text-muted sm:mt-1">
+                  {p.label}
+                </dd>
+              </div>
+            ))}
+          </dl>
 
-        <motion.div
-          initial={{
-            opacity: 0,
-            scale: 0.95
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1
-          }}
-          transition={{
-            duration: 0.6,
-            delay: 0.4
-          }}
-          className="hidden lg:block lg:col-span-4"
-        >
-          <div className="relative">
-            <div className="absolute inset-0 bg-wpblue/10 translate-x-4 translate-y-4 -z-10"></div>
-            <div className="bg-white border border-ink/10 p-8 space-y-6">
-              <div className="font-mono text-xs text-ink/50 mb-4 border-b border-ink/10 pb-4">
-                // current_status.json
-              </div>
-              <div className="space-y-3 font-mono text-sm">
-                <div className="flex justify-between">
-                  <span className="text-ink/60">role:</span>
-                  <span>Senior Plugin Dev</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-ink/60">focus:</span>
-                  <span>React & REST API</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-ink/60">location:</span>
-                  <span>Remote</span>
-                </div>
-                <div className="flex justify-between pt-4 border-t border-ink/10">
-                  <span className="text-ink/60">available:</span>
-                  <span className="text-green-600">true</span>
-                </div>
-              </div>
-            </div>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <ButtonLink
+              href="#projects"
+              variant="primary"
+              icon={<ArrowUpRightIcon width={16} height={16} />}
+            >
+              View Projects
+            </ButtonLink>
+            <ButtonLink
+              href={RESUME_PDF}
+              download
+              icon={<DownloadIcon width={16} height={16} />}
+            >
+              Download Resume (PDF)
+            </ButtonLink>
+            <ButtonLink href="#contact" variant="ghost">
+              Contact
+            </ButtonLink>
           </div>
-        </motion.div>
+        </div>
+
+        <figure className="lg:col-span-5">
+          <div className="overflow-hidden rounded-[var(--radius)] border border-line bg-surface shadow-sm">
+            <figcaption className="flex items-center gap-2 border-b border-line bg-surface-2 px-4 py-3 font-mono text-xs text-muted">
+              <span aria-hidden="true" className="flex gap-1.5">
+                <span className="h-2.5 w-2.5 rounded-full bg-line" />
+                <span className="h-2.5 w-2.5 rounded-full bg-line" />
+                <span className="h-2.5 w-2.5 rounded-full bg-line" />
+              </span>
+              current_status.json
+            </figcaption>
+            <pre className="overflow-x-auto p-5 font-mono text-sm leading-7">
+              <code>
+                <span className="text-muted">{"{"}</span>
+                {"\n"}
+                {STATUS.map((row) => (
+                  <span key={row.key}>
+                    {"  "}
+                    <span className="text-muted">
+                      &quot;{row.key}&quot;:
+                    </span>{" "}
+                    <span className="text-accent">&quot;{row.value}&quot;</span>
+                    <span className="text-muted">,</span>
+                    {"\n"}
+                  </span>
+                ))}
+                {"  "}
+                <span className="text-muted">&quot;available&quot;:</span>{" "}
+                <span className="text-success">true</span>
+                {"\n"}
+                <span className="text-muted">{"}"}</span>
+              </code>
+            </pre>
+          </div>
+        </figure>
       </div>
     </section>
   );
